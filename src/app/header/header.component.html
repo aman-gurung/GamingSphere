@@ -1,15 +1,31 @@
-  <div class="container-fluid jumbotron">
+ 
+ <!-- Here Goes the topmost header -->
+ 
+ <div class="container-fluid jumbotron">
   <div class="col-md-2 col-sm-2 col-xs-12 text-center">
-    <img src="../assets/img/gamecart.png" class="responsive" height= "150" width="200" id="gamecart_icon" >
+    <a href="#">  <img src="../assets/images/GSWhite.png" style="width:120px; height:80px; margin-top:25px;"/> </a>
   </div>
+  
+
     <div class="col-md-10 text-center col-sm-10 hidden-xs">
-      <h1>Game Cart Store</h1>      
-      <p>let us pretend that it's a clever tag line </p>
+    
+     <a href="#" style="text-decoration:none;">
+      <div class="container" style="text-align:center;">
+        <h1 style="color:#505050">GamingSphere</h1>      
+      <p  class="def_foco">let us pretend that it's a clever tag line </p>
     </div>
+    </a>
+    </div>
+  
   </div>
+  <!-- This is Where Header dies! -->
 
 
-  <nav class="navbar navbar-inverse" id="myTopnav">
+
+  <!-- Here goes the Navigation bar-->
+
+<div class="container-fluid top_bar">
+  <nav class="navbar navbar-default top_bar" >
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -22,31 +38,43 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li class="active"><a routerLink="/">Home</a></li>
+            <li><a routerLink="/products">Products</a></li>
             <li><a href="#">Contact</a></li>
+           
+           <!--Options on Navbar-->
+           
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
+              <ul class="dropdown-menu" style="background:rgb(0, 0, 0); color:white;">
+                <li><a href="#" style="color:rgb(165, 165, 165);">Action</a></li>
+                <li><a href="#" style="color:rgb(165, 165, 165);">Another action</a></li>
+                <li><a href="#" style="color:rgb(165, 165, 165);">Something else here</a></li>
+                <!-- <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Nav header</li>
                 <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><a href="#">One more separated link</a></li> -->
               </ul>
+           
             </li>
+          
           </ul>
-          <form class="navbar-form navbar-right hidden-sm hidden-xs">
+          <!--Here Ends the options on navbar-->
+          
+          <form class="navbar-form navbar-right hidden-xs">
               <div class="form-group" style="margin: 1px">
-                <input type="text" placeholder="Search" class="form-control">
+                <input type="text" placeholder="Search" class="form-control" style="background:black; color:rgb(152, 184, 255);">
               </div>
-              <button type="submit" class="btn btn-success " style="margin: 1px">Search</button>
+              <button type="submit" class="btn btn-success " style="margin: 1px; background:black;">
+              <i class="fas fa-search"></i>
+              </button>
             </form>
         </div><!--/.nav-collapse -->
       </div><!--/.container-fluid -->
     </nav>
+  </div>
+<!-- Navigation bar dies here!-->
+
 
 
 
