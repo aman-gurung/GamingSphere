@@ -1,14 +1,17 @@
  
  <!-- Here Goes the topmost header -->
- 
+
  <div class="container-fluid jumbotron">
+    <particles [style]="style" [width]="width" [height]="height" [params]="params"></particles>
   <div class="col-md-2 col-sm-2 col-xs-12 text-center">
+      
     <a href="#">  <img src="../assets/images/GSWhite.png" style="width:120px; height:80px; margin-top:25px;"/> </a>
   </div>
   
+  
 
     <div class="col-md-10 text-center col-sm-10 hidden-xs">
-    
+       
      <a href="#" style="text-decoration:none;">
       <div class="container" style="text-align:center;">
         <h1 style="color:#505050">GamingSphere</h1>      
@@ -41,6 +44,39 @@
             <li class="active"><a routerLink="/">Home</a></li>
             <li><a routerLink="/products">Products</a></li>
             <li><a href="#">Contact</a></li>
+            <!--button starts here-->
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+            <div id="id01" class="modal" style="display: none;">
+  
+              <form class="modal-content animate" action="/action_page.php">
+                <div class="row">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+                        <img src="../../assets/images/GSBlack.png" alt="Avatar" class="avatar" >
+                      </div>
+                  
+      
+                <div class="col-md-12">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" name="uname" required="">
+            
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required="">
+                    
+                  <button type="submit">Login</button>
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                  </label>
+                </div>
+                <div class="col-md-12" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                  <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+              </div>
+              </form>
+            </div>
+
+<!--button ends here-->
            
            <!--Options on Navbar-->
            
@@ -62,12 +98,16 @@
           <!--Here Ends the options on navbar-->
           
           <form class="navbar-form navbar-right hidden-xs">
-              <div class="form-group" style="margin: 1px">
-                <input type="text" placeholder="Search" class="form-control" style="background:black; color:rgb(152, 184, 255);">
-              </div>
-              <button type="submit" class="btn btn-success " style="margin: 1px; background:black;">
-              <i class="fas fa-search"></i>
-              </button>
+              <div class="input-group">
+                  
+                  <input type="text" class="form-control" placeholder="Search for..." style="background-color: #111111;">
+                  <span class="input-group-btn">
+                      <button class="btn btn-default" type="button" style="    padding: 7px; margin: 7px 2px;">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </span>
+                </div>
+              
             </form>
         </div><!--/.nav-collapse -->
       </div><!--/.container-fluid -->
@@ -75,6 +115,17 @@
   </div>
 <!-- Navigation bar dies here!-->
 
+<script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
 
 
 
